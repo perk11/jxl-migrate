@@ -119,7 +119,7 @@ def run():
                     ret = decode(fullpath)
                     if ret is not None:
                         if webp_is_lossless:
-                            print('        Converting PNG to JXL (lossless)')
+                            print('        Converting WebP to JXL (lossless)')
                             ret = convert(ret)
                             if ret is not None:
                                 filesize = os.path.getsize(ret)
@@ -128,7 +128,7 @@ def run():
                             else:
                                 print('        Conversion FAILED')
                         else:
-                            print('        Converting PNG to JXL (lossy)')
+                            print('        Converting WebP to JXL (lossy)')
                             ret = convert(ret, lossy=True)
                             if ret is not None:
                                 filesize = os.path.getsize(ret)
